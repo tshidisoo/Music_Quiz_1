@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Theory Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 GRM Music Team - Quiz 1 🎵</h1>
+            <p>Master the basics of music notation through fun quizzes!</p>
+        </header>
+        
+        <div class="start-screen" id="startScreen">
+            <h2>Welcome to Music Theory Quest!</h2>
+            <p>Test your knowledge of music notation, rhythm, and time signatures in this interactive quiz game.</p>
+            <p>Learn while having fun and earn badges as you progress!</p>
+            <button class="btn start-btn" id="startBtn">Start Your Musical Journey</button>
+        </div>
+        
+        <div class="level-select hidden" id="levelSelect">
+            <h2>Choose Your Level</h2>
+            <div class="level-buttons">
+                <button class="level-btn" data-level="beginner">
+                    Beginner<br><small>Note Values & Rests</small>
+                </button>
+                <button class="level-btn" data-level="intermediate">
+                    Intermediate<br><small>Time Signatures & Bars</small>
+                </button>
+                <button class="level-btn" data-level="advanced">
+                    Advanced<br><small>Notation & Tempo</small>
+                </button>
+            </div>
+        </div>
+        
+        <div class="progress-container hidden" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="score-display hidden" id="scoreDisplay">
+            Score: <span id="currentScore">0</span>
+        </div>
+        
+        <div class="quiz-container hidden" id="quizContainer">
+            <div class="question-number" id="questionNumber">Question 1 of 10</div>
+            <div class="quiz-question" id="question">
+                What note value is represented by a filled circle with a stem?
+                <button class="hint-btn" id="hintBtn">?</button>
+            </div>
+            <div class="hint-text" id="hintText">Look at the shape and parts of the note to determine its value.</div>
+            
+            <div class="notation-display" id="notationDisplay">
+                <!-- Notation image will be inserted here -->
+            </div>
+            
+            <button class="play-sound-btn hidden" id="playSoundBtn">
+                🔊 Play Sound
+            </button>
+            
+            <div class="options-container" id="options">
+                <!-- Options will be dynamically generated -->
+            </div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div class="nav-buttons">
+                <button class="btn" id="prevBtn" disabled>Previous</button>
+                <button class="btn" id="nextBtn" disabled>Next Question</button>
+            </div>
+        </div>
+        
+        <div class="results-container" id="resultsContainer">
+            <h2 class="results-title">Quiz Completed!</h2>
+            <div class="badge" id="badge">🎵</div>
+            <div class="results-score">
+                <span id="finalScore">0</span>/10
+            </div>
+            <div class="results-message" id="resultsMessage"></div>
+            <button class="btn" id="retryBtn">Try Again</button>
+            <button class="btn" id="homeBtn">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
